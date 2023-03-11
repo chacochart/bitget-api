@@ -16,7 +16,6 @@
     "build:clean": "npm run clean && npm run build",
     "build:watch": "npm run clean && tsc --watch",
     "pack": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.js",
-    "prepublish": "npm run build:clean",
     "betapublish": "npm publish --tag beta"
   },
   "author": "Tiago Siebler (https://github.com/tiagosiebler)",
