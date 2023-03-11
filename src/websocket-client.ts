@@ -1,31 +1,12 @@
 import { EventEmitter } from 'events';
 import WebSocket from 'isomorphic-ws';
-
-import WsStore, {
-  BitgetInstType,
-  WsTopicSubscribeEventArgs,
-} from './util/WsStore';
-
+import { WSClientConfigurableOptions, WebsocketClientOptions, WsKey, WsTopic } from './types';
 import {
-  WebsocketClientOptions,
-  WSClientConfigurableOptions,
-  WsKey,
-  WsTopic,
-} from './types';
-
-import {
-  isWsPong,
-  WsConnectionStateEnum,
-  WS_AUTH_ON_CONNECT_KEYS,
-  WS_KEY_MAP,
-  DefaultLogger,
-  WS_BASE_URL_MAP,
-  getWsKeyForTopic,
-  neverGuard,
-  getMaxTopicsPerSubscribeEvent,
-  isPrivateChannel,
-  getWsAuthSignature,
+    DefaultLogger, WS_AUTH_ON_CONNECT_KEYS, WS_BASE_URL_MAP, WS_KEY_MAP, WsConnectionStateEnum,
+    getMaxTopicsPerSubscribeEvent, getWsAuthSignature, getWsKeyForTopic, isPrivateChannel, isWsPong,
+    neverGuard
 } from './util';
+import WsStore, { BitgetInstType, WsTopicSubscribeEventArgs } from './util/WsStore';
 
 const LOGGER_CATEGORY = { category: 'bitget-ws' };
 
@@ -331,7 +312,7 @@ export class WebsocketClient extends EventEmitter {
     this.clearPongTimer(wsKey);
 
     this.logger.silly('Sending ping', { ...LOGGER_CATEGORY, wsKey });
-    this.tryWsSend(wsKey, JSON.stringify({ op: 'ping' }));
+    this.tryWsSend(wsKey, 'ping');
 
     this.wsStore.get(wsKey, true).activePongTimer = setTimeout(() => {
       this.logger.info('Pong timeout - closing socket to reconnect', {

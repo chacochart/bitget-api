@@ -1,9 +1,9 @@
 /// <reference types="node" />
 import { EventEmitter } from 'events';
 import WebSocket from 'isomorphic-ws';
-import { BitgetInstType, WsTopicSubscribeEventArgs } from './util/WsStore';
 import { WSClientConfigurableOptions, WsKey, WsTopic } from './types';
 import { DefaultLogger } from './util';
+import { BitgetInstType, WsTopicSubscribeEventArgs } from './util/WsStore';
 export declare type WsClientEvent = 'open' | 'update' | 'close' | 'exception' | 'reconnect' | 'reconnected' | 'response';
 interface WebsocketClientEvents {
     /** Connection opened. If this connection was previously opened and reconnected, expect the reconnected event instead */
