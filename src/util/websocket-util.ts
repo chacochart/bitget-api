@@ -1,5 +1,5 @@
 import { WsKey } from '../types';
-import { signMessage } from './node-support';
+import { signMessage } from './browser-support';
 import { BitgetInstType, WsTopicSubscribeEventArgs } from './WsStore';
 
 /**

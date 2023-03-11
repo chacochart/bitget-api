@@ -1,11 +1,10 @@
 import axios, { AxiosRequestConfig, AxiosResponse, Method } from 'axios';
 import { RestClientType } from '../types';
-
-import { signMessage } from './node-support';
+import { signMessage } from './browser-support';
 import {
   RestClientOptions,
-  serializeParams,
   getRestBaseUrl,
+  serializeParams,
 } from './requestUtils';
 import { neverGuard } from './websocket-util';
 
