@@ -1,5 +1,5 @@
 import { OrderTimeInForce } from './shared';
-export declare type WalletType = 'spot' | 'mix_usdt' | 'mix_usd';
+export type WalletType = 'spot' | 'mix_usdt' | 'mix_usd';
 export interface NewWalletTransfer {
     fromType: WalletType;
     toType: WalletType;
@@ -16,4 +16,4 @@ export interface NewSpotOrder {
     quantity: string;
     clientOrderId?: string;
 }
-export declare type NewBatchSpotOrder = Omit<NewSpotOrder, 'symbol'>;
+export type NewBatchSpotOrder = Omit<NewSpotOrder, 'symbol'>;

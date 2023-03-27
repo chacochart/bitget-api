@@ -1,8 +1,8 @@
 import { OrderTimeInForce } from './shared';
-export declare type FuturesProductType = 'umcbl' | 'dmcbl' | 'cmcbl' | 'sumcbl' | 'sdmcbl' | 'scmcbl';
-export declare type FuturesHoldSide = 'long' | 'short';
-export declare type FuturesMarginMode = 'fixed' | 'crossed';
-export declare type FuturesHoldMode = 'double_hold' | 'single_hold';
+export type FuturesProductType = 'umcbl' | 'dmcbl' | 'cmcbl' | 'sumcbl' | 'sdmcbl' | 'scmcbl';
+export type FuturesHoldSide = 'long' | 'short';
+export type FuturesMarginMode = 'fixed' | 'crossed';
+export type FuturesHoldMode = 'double_hold' | 'single_hold';
 export interface FuturesAccountBillRequest {
     symbol: string;
     marginCoin: string;
@@ -20,8 +20,8 @@ export interface FuturesBusinessBillRequest {
     lastEndId?: string;
     next?: boolean;
 }
-export declare type FuturesOrderType = 'limit' | 'market';
-export declare type FuturesOrderSide = 'open_long' | 'open_short' | 'close_long' | 'close_short' | 'buy_single' | 'sell_single';
+export type FuturesOrderType = 'limit' | 'market';
+export type FuturesOrderSide = 'open_long' | 'open_short' | 'close_long' | 'close_short' | 'buy_single' | 'sell_single';
 export interface NewFuturesOrder {
     symbol: string;
     marginCoin: string;
@@ -76,7 +76,7 @@ export interface ModifyFuturesPlanOrderTPSL {
     presetTakeProfitPrice?: string;
     presetStopLossPrice?: string;
 }
-export declare type FuturesPlanType = 'profit_plan' | 'loss_plan' | 'moving_plan';
+export type FuturesPlanType = 'profit_plan' | 'loss_plan' | 'moving_plan';
 export interface NewFuturesPlanStopOrder {
     symbol: string;
     marginCoin: string;

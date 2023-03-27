@@ -7,7 +7,7 @@ import { WsTopicSubscribeEventArgs } from './WsStore';
  *  - One livenet, sometimes two, one testnet: NetworkMap<'livenet' | 'testnet', 'livenet2'>
  *  - Only one livenet, no other networks: NetworkMap<'livenet'>
  */
-declare type NetworkMap<TRequiredKeys extends string, TOptionalKeys extends string | undefined = undefined> = Record<TRequiredKeys, string> & (TOptionalKeys extends string ? Record<TOptionalKeys, string | undefined> : Record<TRequiredKeys, string>);
+type NetworkMap<TRequiredKeys extends string, TOptionalKeys extends string | undefined = undefined> = Record<TRequiredKeys, string> & (TOptionalKeys extends string ? Record<TOptionalKeys, string | undefined> : Record<TRequiredKeys, string>);
 export declare const WS_BASE_URL_MAP: Record<WsKey, Record<'all', NetworkMap<'livenet'>>>;
 /** Should be one WS key per unique URL */
 export declare const WS_KEY_MAP: {

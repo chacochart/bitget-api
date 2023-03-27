@@ -7,4 +7,4 @@ export interface Pagination {
     /** Elements per page */
     limit?: string;
 }
-export declare type OrderTimeInForce = 'normal' | 'post_only' | 'fok' | 'ioc';
+export type OrderTimeInForce = 'normal' | 'post_only' | 'fok' | 'ioc';

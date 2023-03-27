@@ -1,4 +1,4 @@
-export declare type BrokerProductType = 'umcbl' | 'usdt' | 'swap' | 'dmcbl' | 'mix' | 'swap';
+export type BrokerProductType = 'umcbl' | 'usdt' | 'swap' | 'dmcbl' | 'mix' | 'swap';
 export interface BrokerSubListRequest {
     pageSize?: string;
     lastEndId?: number;

@@ -1,13 +1,13 @@
 import { WS_KEY_MAP } from '../../util';
-export declare type WsPublicSpotTopic = 'ticker' | 'candle1W' | 'candle1D' | 'candle12H' | 'candle4H' | 'candle1H' | 'candle30m' | 'candle15m' | 'candle5m' | 'candle1m' | 'books' | 'books5' | 'trade';
-export declare type WsPublicFuturesTopic = WsPublicSpotTopic;
-export declare type WsPrivateSpotTopic = 'account' | 'orders';
-export declare type WsPrivateFuturesTopic = 'account' | 'positions' | 'orders' | 'ordersAlgo';
-export declare type WsPublicTopic = WsPublicSpotTopic | WsPublicFuturesTopic;
-export declare type WsPrivateTopic = WsPrivateSpotTopic | WsPrivateFuturesTopic;
-export declare type WsTopic = WsPublicTopic | WsPrivateTopic;
+export type WsPublicSpotTopic = 'ticker' | 'candle1W' | 'candle1D' | 'candle12H' | 'candle4H' | 'candle1H' | 'candle30m' | 'candle15m' | 'candle5m' | 'candle1m' | 'books' | 'books5' | 'trade';
+export type WsPublicFuturesTopic = WsPublicSpotTopic;
+export type WsPrivateSpotTopic = 'account' | 'orders';
+export type WsPrivateFuturesTopic = 'account' | 'positions' | 'orders' | 'ordersAlgo';
+export type WsPublicTopic = WsPublicSpotTopic | WsPublicFuturesTopic;
+export type WsPrivateTopic = WsPrivateSpotTopic | WsPrivateFuturesTopic;
+export type WsTopic = WsPublicTopic | WsPrivateTopic;
 /** This is used to differentiate between each of the available websocket streams */
-export declare type WsKey = typeof WS_KEY_MAP[keyof typeof WS_KEY_MAP];
+export type WsKey = typeof WS_KEY_MAP[keyof typeof WS_KEY_MAP];
 export interface WSClientConfigurableOptions {
     /** Your API key */
     apiKey?: string;

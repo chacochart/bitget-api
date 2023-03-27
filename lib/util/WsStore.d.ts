@@ -9,14 +9,14 @@ export declare enum WsConnectionStateEnum {
     RECONNECTING = 4
 }
 /** A "topic" is always a string */
-export declare type BitgetInstType = 'SP' | 'SPBL' | 'MC' | 'UMCBL' | 'DMCBL';
+export type BitgetInstType = 'SP' | 'SPBL' | 'MC' | 'UMCBL' | 'DMCBL';
 export interface WsTopicSubscribeEventArgs {
     instType: BitgetInstType;
     channel: WsTopic;
     /** The symbol, e.g. "BTCUSDT" */
     instId: string;
 }
-declare type WsTopicList = Set<WsTopicSubscribeEventArgs>;
+type WsTopicList = Set<WsTopicSubscribeEventArgs>;
 interface WsStoredState {
     /** The currently active websocket connection */
     ws?: WebSocket;
