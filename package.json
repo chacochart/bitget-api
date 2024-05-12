@@ -1,5 +1,5 @@
 {
-  "name": "bitget-api",
+  "name": "@chacochart/bitget-api",
   "version": "1.0.5",
   "description": "Node.js connector for Bitget REST APIs and WebSockets, with TypeScript & end-to-end tests.",
   "main": "lib/index.js",
@@ -18,7 +18,7 @@
     "pack": "cross-env NODE_ENV=production webpack --config webpack/webpack.config.js",
     "betapublish": "npm publish --tag beta"
   },
-  "author": "Tiago Siebler (https://github.com/tiagosiebler)",
+  "author": "Chaconam",
   "contributors": [],
   "dependencies": {
     "axios": "^1.6.8",
@@ -58,17 +58,13 @@
     "bitcoin",
     "best"
   ],
-  "funding": {
-    "type": "individual",
-    "url": "https://github.com/sponsors/tiagosiebler"
-  },
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tiagosiebler/bitget-api"
+    "url": "https://github.com/chacochart/bitget-api.git"
   },
   "bugs": {
-    "url": "https://github.com/tiagosiebler/bitget-api/issues"
+    "url": "https://github.com/chacochart/bitget-api/issues"
   },
-  "homepage": "https://github.com/tiagosiebler/bitget-api#readme"
+  "homepage": "https://github.com/chacochart/bitget-api#readme"
 }
